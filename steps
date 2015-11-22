@@ -1,0 +1,6 @@
+data = get_data('in')
+parsed = dep_parse(data)
+chunked = get_chunklink(parsed)
+ner = ner_extract(data)
+chunked = combiner(chunked, ner)
+
