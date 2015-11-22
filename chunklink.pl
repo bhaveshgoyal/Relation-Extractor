@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/local/bin/perl -w
 
 ###
 ### Produces a convenient list of words, chunks, functions, and links from Penn TreeBank II
@@ -240,12 +240,12 @@ foreach $file (@ARGV) {                     # loop: for each treebank file
     else {
 	die "file not defined!\n";
     }
-    if ($file =~ /\/wsj_([0-9]+)\.mrg$/) {  # extract file number
-	$filenumber=$1;
-    }
-    else {
-	die "$file does not match!\n";
-    }
+#    if ($file =~ /nlp_proj\/de\.mrg/) {  # extract file number
+        $filenumber=1;
+        #   }
+    #   else {
+#	die "$file does not match!\n";
+    #   }
     print STDERR "$filenumber ";
     $sentence='';                           # initialize sentence string
     $sentence_number=0;                     # initialize sentence counter
